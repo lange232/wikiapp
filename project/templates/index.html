@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  login app
+</h1>
+<h2 class="subtitle">
+  for wiki
+</h2>
+{% if current_user.is_authenticated %}
+<a href="{{ url_for('sphinx.serve_sphinx_docs') }}">wiki link</a>
+{% endif %}
+{% endblock %}
