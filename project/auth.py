@@ -10,6 +10,7 @@ auth = Blueprint('auth', __name__)
 def login():
     return render_template('login.html')
 
+
 @auth.route('/login', methods=['POST'])
 def login_post():
     # login code goes here
